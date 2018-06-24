@@ -5,6 +5,29 @@
 		</h1>
 		<div class="Sq-container sq-flex-row sq-justify-center">
 				<fieldset>
+					<label>Alternative products</label>
+					<%= text_input f, :alternative_products %>
+
+					<label>Cost</label>
+					<%= text_input f, :base_price %>
+
+					<label>Image</label>
+					<%= text_input f, :image %>
+
+					<label>In Stock</label>
+					<%= text_input f, :stock %>
+
+					<label>Name</label>
+					<%= text_input f, :name %>
+
+					<label>Product number</label>
+					<%= text_input f, :pnr %>
+
+					<label>Summary</label>
+					<%= text_input f, :summary %>
+					
+					<label>Supplier</label>
+					<%= text_input f, :supplier %>
 
 				</fieldset>
 		</div>
