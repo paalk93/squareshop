@@ -1,15 +1,14 @@
 defmodule Squareshop.Invoice do
 #importing functions
-	import Ecto.Query
+	# import Ecto.Query
 	require Stripe
 #Setting up aliases
 	alias Squareshop.Repo
 	alias Squareshop.Invoice
 	alias Squareshop.Invoice.Invoices
 	alias Squareshop.Invoice.Billing
-	alias Squareshop.Identity.User
-	alias Squareshop.Identity
-	alias Ecto.Multi
+	# alias Squareshop.Identity.User
+	# alias Squareshop.Identity
 	alias Stripe
 	alias Stripe.Charge
 

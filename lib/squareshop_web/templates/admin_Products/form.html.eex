@@ -1,0 +1,12 @@
+<%= form_for @changeset, @action, fn f -> %>
+	<form class="sq-form" action="index.html" method="post" type="text">
+		<h1 class="sq-text-center">Add new product
+				<span class="sq-subtext"></span>
+		</h1>
+		<div class="Sq-container sq-flex-row sq-justify-center">
+				<fieldset>
+
+				</fieldset>
+		</div>
+	</form>
+<% end %>
