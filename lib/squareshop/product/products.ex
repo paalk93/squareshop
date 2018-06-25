@@ -16,10 +16,9 @@ defmodule Squareshop.Products.Product do
     timestamps()
   end
 
-  @doc false
   def changeset(products, attrs) do
     products
     |> cast(attrs, [:name, :image, :pnr, :summary, :base_price, :stock, :supplier, :alternative_products])
-    |> validate_required([:name, :pnr, :summary, :base_price, :stock, :supplier, :alternative_products])
+    |> validate_required([:name, :pnr, :base_price, :stock, :supplier])
   end
 end

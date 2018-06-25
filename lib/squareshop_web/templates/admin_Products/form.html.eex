@@ -4,32 +4,32 @@
 				<span class="sq-subtext"></span>
 		</h1>
 		<div class="Sq-container sq-flex-row sq-justify-center">
-				<fieldset>
-					<label>Alternative products</label>
-					<%= text_input f, :alternative_products %>
+			<fieldset>
+				<label>Alternative products</label>
+				<%= text_input f, :alternative_products %>
 
-					<label>Cost</label>
-					<%= text_input f, :base_price %>
+				<label>Cost</label>
+				<%= text_input f, :base_price %>
 
-					<label>Image</label>
-					<%= text_input f, :image %>
+				<label>Image</label>
+				<%= text_input f, :image %>
 
-					<label>In Stock</label>
-					<%= text_input f, :stock %>
+				<label>In Stock</label>
+				<%= text_input f, :stock %>
 
-					<label>Name</label>
-					<%= text_input f, :name %>
+				<label>Name</label>
+				<%= text_input f, :name %>
 
-					<label>Product number</label>
-					<%= text_input f, :pnr %>
+				<label>Product number</label>
+				<%= text_input f, :pnr %>
 
-					<label>Summary</label>
-					<%= text_input f, :summary %>
-					
-					<label>Supplier</label>
-					<%= text_input f, :supplier %>
+				<label>Summary</label>
+				<%= text_input f, :summary %>
 
-				</fieldset>
+				<label>Supplier</label>
+				<%= text_input f, :supplier %>
+				<%= submit "Submit" %>
+			</fieldset>
 		</div>
 	</form>
 <% end %>
