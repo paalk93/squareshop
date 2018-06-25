@@ -3,6 +3,7 @@ defmodule SquareshopWeb.UserController do
 
   alias Squareshop.Identity
   alias Squareshop.Identity.User
+  alias Squareshop.Identity.Address
 
   def index(conn, _params) do
     users = Identity.list_users()
@@ -10,7 +11,7 @@ defmodule SquareshopWeb.UserController do
   end
 
   def new(conn, _params) do
-    changeset = Identity.create_user()
+    changeset = Identity.change_user(%User{})
     render(conn, "new.html", changeset: changeset)
   end
 
