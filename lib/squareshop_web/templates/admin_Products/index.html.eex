@@ -1,7 +1,28 @@
 <div class="sq-main-layout">
   <div Style="grid-area:  1 / 2 / span 5 / span 7; ">
     <table class="sq-mt-1 sq-border-collapse sq-tables sq-table-hover sq-table-misc-arrow-up sq-custom-table-position">
-      <tr>
+		<thead>
+			<tr>
+				<th>Produktnummer</th>
+				<th>Produkt navn</th>
+				<th>Beskrivelse</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			<%= for prod <- @products do %>
+			<tr>
+			<td> <%= prod.pnr %> </td>
+			<td> <%= prod.name %> </td>
+			<td> <%= prod.base_price %> </td>
+
+			</tr>
+			<% end %>
+		</tbody>
+
+
+
+      <!-- <tr>
         <th>Produktnummer</th>
         <th>Produkt navn</th>
         <th>Beskrivelse</th>
@@ -40,12 +61,12 @@
         <td class="sq-table-row-padding-05">produktnummer</td>
         <td>Kaffekopp 42</td>
         <td>Rund å vannjtætt livets kopp</td>
-      </tr>
+      </tr> -->
     </table>
-    <div id="productNumber" class="sq-modal">
+    <!-- <div id="productNumber" class="sq-modal">
       <div class="sq-modal-content-admin-prod">
         <span class="sq-close-button" onclick="toggleModal4()">&times;</span>
-        <!--box-->
+
         <h3>produktnummer</h3>
         <p>product name</p>
         <form action="submit">
@@ -54,7 +75,7 @@
           <input type="submit" value="save"></input>
         </form>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 <script>
