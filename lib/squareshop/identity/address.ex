@@ -14,13 +14,6 @@ defmodule Squareshop.Identity.Address do
     timestamps()
   end
 
-  # def changeset(address, attrs \\ %{}) do
-  #   address
-  #   |> Squareshop.Repo.preload(:user)
-  #   |> cast(attrs, [:address, :country, :city, :zip_code, :user_id])
-  #   |> validate_required([:address, :country, :city, :zip_code])
-  #   |> foreign_key_constraint(:user_id)
-  # end
 
   @doc false
   def changeset(address, attrs) do
