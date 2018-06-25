@@ -1,2 +1,6 @@
-<h2>New product</h2>
-<%= render "form.html", Map.put(assigns, :action, admin_products_path(@conn, :create)) %>
+<div class="sq-main-layout">
+	<div class="sq-admin-products-table-layout-area-panel">
+	<%= render "form.html", Map.put(assigns, :action, admin_products_path(@conn, :create)) %>
+
+	</div>
+</div>
