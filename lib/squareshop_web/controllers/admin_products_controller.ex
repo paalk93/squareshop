@@ -19,7 +19,7 @@ defmodule SquareshopWeb.AdminProductsController do
       {:ok, product} ->
         conn
         |> put_flash(:info, "Product created successfully.")
-        |> redirect(to: admin_products_path(conn, :show, product))
+        |> redirect(to: admin_products_path(conn, :index))
 		{:error, %Ecto.Changeset{} = changeset} ->
 			render(conn, "new.html", changeset: changeset)
 		end
