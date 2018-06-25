@@ -25,16 +25,9 @@ defmodule SquareshopWeb.AdminProductsController do
 		end
 	end
 
-	# def update(conn, %{"id" => id, "product" => product_params}) do
-    #   product = Identity.get_product!(id)
-	#
-	# 	case Identity.update_product(product, product_params) do
-	# 	{:ok, product} ->
-	# 	  conn
-	# 	  |> put_flash(:info, "product updated successfully.")
-	# 	  |> redirect(to: product_path(conn, :show, product))
-	# 	{:error, %Ecto.Changeset{} = changeset} ->
-	# 	  render(conn, "edit.html", product: product, changeset: changeset)
-	# 	end
-    # end
+	def show(conn, id) do
+		product = Products.get_product(id)
+		render conn, "show.html", product: product
+	end
+	
 end
