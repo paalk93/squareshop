@@ -18,10 +18,18 @@ defmodule Squareshop.Identity.User do
 		Logger.debug("number 1 ran")
 		user
 		|> Squareshop.Repo.preload(:addresses)
-		|> cast(attrs, [:fname, :lname, :phone, :email, :password, :id])
+		|> cast(attrs, [:fname, :lname, :phone, :email, :password])
 		|> validate_required([:fname, :lname, :email])
-		|> put_assoc(:addresses, [addr])
+	    |> put_assoc(:addresses, [addr])
 
+	end
+
+	def changeset(user, attrs) do
+		user
+		|> Squareshop.Repo.preload(:addresses)
+		|> cast(attrs, [:fname, :lname, :phone, :email, :password, :id])
+		|>cast_assoc(:addresses)
+		|> validate_required([:fname, :lname, :email])
 	end
 
 end

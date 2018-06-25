@@ -1,6 +1,7 @@
 defmodule Squareshop.Identity.Address do
   use Ecto.Schema
   import Ecto.Changeset
+  alias Squareshop.Identity.Address
 
 
   schema "addresses" do
@@ -13,11 +14,12 @@ defmodule Squareshop.Identity.Address do
     timestamps()
   end
 
+
   @doc false
   def changeset(address, attrs) do
     address
     |> cast(attrs, [:address, :country, :city, :zip_code, :user_id])
-    |> validate_required([:address, :country, :city, :zip_code])
+    |> validate_required([:address, :country, :zip_code])
 
   end
 

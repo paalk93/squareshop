@@ -16,7 +16,7 @@ defmodule Squareshop.Identity do
 	def create_user(userdata) do
 
 		# Logger.debug("user_address = #{inspect(user_address)}")
-		userdata = Map.put(userdata, :user_id, nil)
+		# userdata = Map.put(userdata, :user_id, nil)
 		address = %Address{}
 		|> Address.changeset(userdata)
 
@@ -65,6 +65,10 @@ defmodule Squareshop.Identity do
 		Repo.get!(User, user)
 		|>Repo.delete()
 	end
+
+	def change_user(%User{} = user) do
+		User.changeset(user, %{})
+	  end
 
 
 end

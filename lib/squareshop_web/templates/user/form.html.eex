@@ -17,15 +17,23 @@
                                 <%= text_input f, :fname %>
                                 <label>Last name</label>
                                 <%= text_input f, :lname %>
+                                <label>Phone</label>
+                                <%= text_input f, :phone %>
                             </fieldset>
+                        </div>
+                    </div>
+                    <div class="sq-tabs">
+                        <input type="radio" id="tab-2" name="tab-group-1">
+                        <label for="tab-2">Address</label>
+                        <div class="sq-tab">
                             <fieldset>
                                 <legend>Address</legend>
                                 <label>Address</label>
                                 <%= text_input f, :address %>
                                 <label>ZipCode</label>
                                 <%= text_input f, :zip_code %>
-                                <label>Phone</label>
-                                <%= text_input f, :phone %>
+                                 <label>City</label>
+                                <%= text_input f, :city %>
                             </fieldset>
                         </div>
                     </div>
