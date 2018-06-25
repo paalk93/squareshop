@@ -1,35 +1,37 @@
+
+
 <%= form_for @changeset, @action, fn f -> %>
 	<form class="sq-form" action="index.html" method="post" type="text">
 		<h1 class="sq-text-center">Add new product
 				<span class="sq-subtext"></span>
 		</h1>
 		<div class="Sq-container sq-flex-row sq-justify-center">
-				<fieldset>
-					<label>Alternative products</label>
-					<%= text_input f, :alternative_products %>
-
-					<label>Cost</label>
-					<%= text_input f, :base_price %>
-
-					<label>Image</label>
-					<%= text_input f, :image %>
-
-					<label>In Stock</label>
-					<%= text_input f, :stock %>
-
-					<label>Name</label>
-					<%= text_input f, :name %>
-
-					<label>Product number</label>
-					<%= text_input f, :pnr %>
-
-					<label>Summary</label>
-					<%= text_input f, :summary %>
-					
-					<label>Supplier</label>
-					<%= text_input f, :supplier %>
-
-				</fieldset>
+			<fieldset>
+				<label>Alternative products</label>
+				<%= text_input f, :alternative_products %>
+				<br>
+				<label>Cost</label>
+				<%= text_input f, :base_price %>
+				<br>
+				<label>Image</label>
+				<%= text_input f, :image %>
+<br>
+				<label>In Stock</label>
+				<%= text_input f, :stock %>
+<br>
+				<label>Name</label>
+				<%= text_input f, :name %>
+<br>
+				<label>Product number</label>
+				<%= text_input f, :pnr %>
+<br>
+				<label>Summary</label>
+				<%= text_input f, :summary %>
+<br>
+				<label>Supplier</label>
+				<%= text_input f, :supplier %>
+				<button onclick="window.location.href='/adminproducts'" type="submit" class="sq-btn"></button>
+			</fieldset>
 		</div>
 	</form>
 <% end %>

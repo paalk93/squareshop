@@ -17,11 +17,17 @@ defmodule Squareshop.Products do
 		|> Repo.insert()
 	end
 
+
+	def change_product(%Product{} = products) do
+		Product.changeset(products, %{})
+	end
+
 	# Listing up all the products
 	def list_products() do
 		Repo.all(Product)
 	end
 
-
-
+	def get_product!(id) do
+		 Repo.get!(Product, id)
+	end
 end
