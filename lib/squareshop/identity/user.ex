@@ -19,7 +19,6 @@ defmodule Squareshop.Identity.User do
 		user
 		|> Squareshop.Repo.preload(:addresses)
 		|> cast(attrs, [:fname, :lname, :phone, :email, :password])
-		#|>cast_assoc(:addresses)
 		|> validate_required([:fname, :lname, :email])
 	    |> put_assoc(:addresses, [addr])
 
