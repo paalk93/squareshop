@@ -28,7 +28,7 @@
 
 				<label>Supplier</label>
 				<%= text_input f, :supplier %>
-				<%= submit "Submit" %>
+				<button onclick="window.location.href='/adminproducts'" type="submit" class="sq-btn"></button>
 			</fieldset>
 		</div>
 	</form>
