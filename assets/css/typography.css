@@ -52,7 +52,7 @@ p {font-size: 0.9rem;}
 .sq-text-right{text-align: right !important;}
 .sq-text-center{text-align: center !important;}
 .sq-text-justify{text-align: justify !important;}
-
+.sq-text-bottom{text-align: bottom;}
 /* DropCaps */
 
 /* .sq-firstcharacter {

@@ -60,6 +60,8 @@
 .sq-panel-main-top{grid-area: 1 / 1 / span 2 / span end;}
 .sq-panel-main-bottom{grid-area: 3 / 1 / span end / span end;}
 .sq-panel-main{grid-area: 1 / 1 / span end / span end;}
+.sq-regpanel-main{grid-area: 2 / 3 / span 3 / span 5;}
+.sq-regpanel-tabs{grid-area: 1 / 3 / span 1 / span 5;}
 
 
 
@@ -80,9 +82,15 @@
 
 /* Flex */
 .sq-container{
-	display: flex;
+	/* display: flex; */
 	height: 100%;
 	width: 100%;
+}
+.sq-reguser-container{
+  display: flex;
+  height: 27rem;
+  max-width: 20em;
+
 }
 .sq-flex-column{flex-direction:column;}
 .sq-flex-row{flex-direction:row;}
