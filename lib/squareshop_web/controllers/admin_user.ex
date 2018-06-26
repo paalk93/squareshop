@@ -1,4 +1,4 @@
-defmodule SquareshopWeb.BrukerStyringController do
+defmodule SquareshopWeb.AdminUserController do
   use SquareshopWeb, :controller
   alias Squareshop.Identity
   alias Squareshop.Identity.User
