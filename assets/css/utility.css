@@ -16,6 +16,10 @@
 .sq-air-x-4{margin: 0em 4em 0em 4em;}
 .sq-air-x-5{ margin: 0em 5em 0em 5em;}
 
+    /* margin left classes*/
+
+.sq-margin-left{margin-left: 1em;}    
+
     /* Air end */
     /* Margin all sides */
 .sq-margin-05{margin: 0.5em;}
@@ -123,3 +127,17 @@
 
     /*Misc*/
 .sq-border-collapse {border-collapse:collapse;}
+
+/* Width classes for Forms */
+.sq-width-10p{width: 10%;}
+.sq-width-20p{width: 20%;}
+.sq-width-30p{width: 30%;}
+.sq-width-40p{width: 40%;}
+.sq-width-50p{width: 50%;}
+.sq-width-60p{width: 60%;}
+.sq-width-65p{width: 65%;}
+.sq-width-70p{width: 70%;}
+.sq-width-80p{width: 80%;}
+.sq-width-90p{width: 90%;}
+.sq-width-95p{width: 95%;}
+.sq-width-100p{width: 100%;}

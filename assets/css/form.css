@@ -15,8 +15,8 @@
 .sq-form select,
 .sq-form textarea{
     max-width: 100%;
-    min-width:95%;
-    border:none;
+    /* min-width:95%; */
+    border:solid;
     border-top: solid .1em var(--background);
     border-bottom: solid .1em var(--primary);
     margin-bottom: 1rem;
