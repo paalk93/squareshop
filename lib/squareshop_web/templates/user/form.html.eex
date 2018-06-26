@@ -12,11 +12,11 @@
                             <fieldset class="sq-reguser-container">
                                 <legend>Personalia</legend>
                                 <label>First Name</label>
-                                <%= text_input f, :fname %>
+                                <%= text_input f, :fname, class: "sq-width-95p" %>
                                 <label>Last name</label>
-                                <%= text_input f, :lname %>
+                                <%= text_input f, :lname, class: "sq-width-95p" %>
                                 <label>Phone</label>
-                                <%= text_input f, :phone %>
+                                <%= text_input f, :phone, class: "sq-width-95p" %>
                             </fieldset>
                         </div>
                     </div>
@@ -27,13 +27,13 @@
                             <fieldset class="sq-reguser-container">
                                 <legend>Address</legend>
                                 <label>Address</label>
-                                <%= text_input f, :address %>
+                                <%= text_input f, :address, class: "sq-width-95p" %>
                                 <label>ZipCode / City</label>
-                                <%= text_input f, :zip_code %>
-                                 <label>City</label>
-                                 <%= text_input f, :city %>
+                                <div class="sq-flex-row sq-width-95p">
+                                <%= text_input f, :zip_code, class: "sq-width-30p" %> <%= text_input f, :city, class: "sq-width-65p sq-margin-left" %>
+                                </div>
                                 <label>Country</label>
-                               <%= text_input f, :country %>
+                               <%= text_input f, :country, class: "sq-width-95p" %>
                             </fieldset>
                         </div>
                     </div>
@@ -44,11 +44,11 @@
                             <fieldset class="sq-reguser-container">
                                 <legend>Email/Password</legend>
                                 <label>E-mail</label>
-                                <%= text_input f, :email %>
+                                <%= text_input f, :email, class: "sq-width-95p" %>
                                 <label>Password</label>
-                                <%= text_input f, :password %>
+                                <%= text_input f, :password, class: "sq-width-95p" %>
                                 <label>Retype Password</label>
-                                <%= text_input f, :password %>
+                                <%= text_input f, :password, class: "sq-width-95p" %>
                                 <button onclick="window.location.href='/user'" type="submit" class="sq-btn1">Register</button>
                             </fieldset>
                         </div>
