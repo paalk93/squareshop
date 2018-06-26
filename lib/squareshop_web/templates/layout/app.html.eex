@@ -25,7 +25,7 @@
       <!--NAVBAR Part 2/3-->
   		</div>
   			<div class="sq-navbar-domain  sq-secondary" style="width:100%;display:flex;">
-  				<a href="/homepage" class="sq-text-white sq-secondary">DummyDomain</a>
+  				<a href="/" class="sq-text-white sq-secondary">Home</a>
   				<div class="sq-flex-1"></div>
   				<!-- Searchbar -->
   				<div class="sq-flex-auto sq-form">
@@ -61,7 +61,7 @@
   					<a href="/products">Big Black Kopps</a>
   					<a href="/products">Bestselgere</a>
   					<a href="/products">Kampanjer</a>
-  					<a href="/user">Userpage</a>
+  					<a href="/user/1">Userpage</a>
   				</div>
   			</div>
   		</div>
