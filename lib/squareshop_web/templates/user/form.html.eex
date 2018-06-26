@@ -3,16 +3,14 @@
                 <h1 class="sq-text-center">Register
                     <span class="sq-subtext"></span>
                 </h1>
-                <div class="sq-container sq-flex-row sq-justify-center">
+                <div class="sq-container sq-flex-row sq-justify-center ">
 
                     <div class="sq-tabs">
                         <input type="radio" id="tab-1" name="tab-group-1" checked>
                         <label for="tab-1">Personalia</label>
                         <div class="sq-tab">
-                            <fieldset>
+                            <fieldset class="sq-reguser-container">
                                 <legend>Personalia</legend>
-                                <label>Country</label>
-                               <%= text_input f, :country %>
                                 <label>First Name</label>
                                 <%= text_input f, :fname %>
                                 <label>Last name</label>
@@ -22,18 +20,20 @@
                             </fieldset>
                         </div>
                     </div>
-                    <div class="sq-tabs">
+                    <div class="sq-tabs ">
                         <input type="radio" id="tab-2" name="tab-group-1">
                         <label for="tab-2">Address</label>
                         <div class="sq-tab">
-                            <fieldset>
+                            <fieldset class="sq-reguser-container">
                                 <legend>Address</legend>
                                 <label>Address</label>
                                 <%= text_input f, :address %>
-                                <label>ZipCode</label>
+                                <label>ZipCode / City</label>
                                 <%= text_input f, :zip_code %>
                                  <label>City</label>
-                                <%= text_input f, :city %>
+                                 <%= text_input f, :city %>
+                                <label>Country</label>
+                               <%= text_input f, :country %>
                             </fieldset>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                         <input type="radio" id="tab-3" name="tab-group-1">
                         <label for="tab-3">Email/Password</label>
                         <div class="sq-tab">
-                            <fieldset>
+                            <fieldset class="sq-reguser-container">
                                 <legend>Email/Password</legend>
                                 <label>E-mail</label>
                                 <%= text_input f, :email %>
@@ -49,7 +49,7 @@
                                 <%= text_input f, :password %>
                                 <label>Retype Password</label>
                                 <%= text_input f, :password %>
-                                <button onclick="window.location.href='/user'" type="submit" class="sq-btn">Register</button>
+                                <button onclick="window.location.href='/user'" type="submit" class="sq-btn1">Register</button>
                             </fieldset>
                         </div>
                     </div>

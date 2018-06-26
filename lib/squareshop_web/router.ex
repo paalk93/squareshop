@@ -24,7 +24,8 @@ defmodule SquareshopWeb.Router do
 		resources "/products", ProductsController
 		resources "/adminproducts", AdminProductsController
 		resources "/adminuser", AdminUserController
-		resources "/user", UserController
+    resources "/user", UserController
+    get "/form", FormController, :index
 	end
 
 

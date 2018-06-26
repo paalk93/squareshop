@@ -1,5 +1,12 @@
 /* This file is for your main application css. */
+.tab {
+  display: none;
+}
 
+.tab.active {
+  display: inherit;
+ 
+}
 /* FlexBox*/
 
 .sq-flex-1{
@@ -9,6 +16,17 @@ flex: 1;
     flex: auto;
 }
 
+.sq-btn1{
+  height:10%;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  background-color:var(--background);
+  padding:0;
+  margin:0;
+  justify-content: center;
+}
 /* Paul Buttons */
 
 .sq-nav-btn-group button {
