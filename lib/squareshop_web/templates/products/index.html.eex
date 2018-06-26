@@ -6,7 +6,7 @@
     <p class="sq-justify-center">Placeholder for sort function</p>
   </div>
   <div class="sq-products-table-layout-area-panel"style="padding:0">
-    <div class="sq-air-y-1 sq-panel sq-flex-wrap sq-justify-space-between">
+    <div class="sq-air-y-1 sq-panel sq-flex-wrap sq-justify-space-around">
     <!-- Product card 1 -->
     <%= for product <- @products do %>
       <div class="sq-product-card sq-card">
@@ -24,77 +24,7 @@
       </div>
       <!-- Product card 1 end -->
       <% end %>
-      <!-- Product card 2 -->
-      <div class="sq-product-card sq-card">
-        <div class="sq-card-header sq-text-center">
-          <p>Our amazing Coffee Cup</p>
-        </div>
-        <div class="sq-card-body sq-flexbox-row sq-align-center sq-justify-center">
-          <img src="/images/user.png" class="sq-product-img">
-        </div>
-        <div class="sq-card-footer sq-text-center">
-          <p class="sq-display-inline-block">Price: $19.99</p>
-          <button class="sq-margin-05">Info</button>
-          <button>Buy</button>
-        </div>
-      </div>
-      <!-- Product card 2 end -->
-
-      <!-- Product card 3 -->
-      <div class="sq-product-card sq-card">
-        <div class="sq-card-header sq-text-center">
-          <p>Our amazing Coffee Cup</p>
-        </div>
-        <div class="sq-card-body sq-flexbox-row sq-align-center sq-justify-center">
-          <img src="/images/user.png" class="sq-product-img">
-        </div>
-        <div class="sq-card-footer sq-text-center">
-          <p class="sq-display-inline-block">Price: $19.99</p>
-          <button class="sq-margin-05">Info</button>
-          <button>Buy</button>
-        </div>
-      </div>
-      <!-- Product card 3 end -->
-
-      <!-- Product card 4 -->
-      <div class="sq-product-card sq-card">
-        <div class="sq-card-header sq-text-center">
-          <p>Our amazing Coffee Cup</p>
-        </div>
-        <div class="sq-card-body sq-flexbox-row sq-align-center sq-justify-center">
-          <img src="/images/user.png" class="sq-product-img">
-        </div>
-        <div class="sq-card-footer sq-text-center">
-          <p class="sq-display-inline-block">Price: $19.99</p>
-          <button class="sq-margin-05">Info</button>
-          <button>Buy</button>
-        </div>
-      </div>
-      <!-- Product card 4 end -->
-
-      <!-- Product card 5 -->
-      <div class="sq-product-card sq-card">
-        <div class="sq-card-header sq-text-center">
-          <p>Our amazing Coffee Cup</p>
-        </div>
-        <div class="sq-card-body sq-flexbox-row sq-align-center sq-justify-center">
-          <img src="/images/user.png" class="sq-product-img">
-        </div>
-        <div class="sq-card-footer sq-text-center">
-          <p class="sq-display-inline-block">Price: $19.99</p>
-          <button class="sq-margin-05">Info</button>
-          <button>Buy</button>
-        </div>
-      </div>
-      <!-- Product card 5 end -->
-      <div class="sq-product-card sq-card"></div>
-      <div class="sq-product-card sq-card"></div>
-      <div class="sq-product-card sq-card"></div>
-      <div class="sq-product-card sq-card"></div>
-      <div class="sq-product-card sq-card"></div>
-      <div class="sq-product-card sq-card"></div>
-      <div class="sq-product-card sq-card"></div>
-      <div class="sq-product-card sq-card"></div>
+     
     </div>
   </div>
 </div>

@@ -105,4 +105,9 @@
 .sq-shit{
   flex-wrap:nowrap;
 }
+
+.sq-justify-space-around{
+  justify-content: space-around;
+  margin: auto;
+}
 /* Flex end */
