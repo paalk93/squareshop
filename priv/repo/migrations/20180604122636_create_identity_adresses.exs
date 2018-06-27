@@ -7,7 +7,7 @@ defmodule Squareshop.Repo.Migrations.CreateIdentityAddresses do
       add :country, :string
       add :city, :string
       add :zip_code, :integer
-      add :user_id, references(:users)
+      add :user_id, :integer
       timestamps()
     end
   end
