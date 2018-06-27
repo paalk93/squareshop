@@ -25,27 +25,23 @@
     <strong>Phone:</strong>
     <%= @user.phone %>
   </li>
-  <%= for address <- @user.addresses do %>
   <li>
     <strong>Address:</strong>
-    <%= address.address %>
+    <%= @user.address %>
   </li>
-
   <li>
     <strong>Zip code:</strong>
-    <%= address.zip_code %>
+    <%= @user.zip_code %>
   </li>
-
   <li>
     <strong>City:</strong>
-    <%= address.city %>
+    <%= @user.city %>
   </li>
-
-  <%# <li>
+  <li>
     <strong>Country:</strong>
-    <%= address.country 
-  </li> %>
-  <% end %>
+    <%= @user.country %> 
+  </li> 
+  <%% end %>
 
 </ul>
 		

@@ -2,47 +2,39 @@ defmodule Squareshop.Identity do
 
 #Importing functions
 	import Ecto.Query
-	import Ecto.Association
 
 #Setting up Aliases
 	alias Squareshop.Repo
 	alias Squareshop.Identity
 	alias Squareshop.Identity.User
-	alias Squareshop.Identity.Address
 	alias Ecto.Multi
 	require Logger
 
 #Add a new user
-	def create_user(userdata) do
-
-		# Logger.debug("user_address = #{inspect(user_address)}")
-		# userdata = Map.put(userdata, :user_id, nil)
-		address = %Address{}
-		|> Address.changeset(userdata)
-
+	def create_user(attrs \\ %{}) do
 		%User{}
-		|> User.changeset(userdata, address)
+		|> User.changeset(attrs)
 		|> Repo.insert()
 	end
 
-	def add_address(addressdata \\ %{}, id) do
-		Address.changeset(User, id, addressdata)
-		|> Repo.insert()
-	end
+	# def add_address(addressdata \\ %{}, id) do
+	# 	Address.changeset(User, id, addressdata)
+	# 	|> Repo.insert()
+	#end
 #Get all the CreateUsers
 	def list_users do
 		Repo.all(User)
 	end
 #Get a single user
 	 def get_user!(id) do
-		 Repo.get!(User, id) |> Repo.preload(:addresses)
+		 Repo.get!(User, id)
 	end
 
-	def get_address!(id) do
-		user_id = Kernel.elem(Integer.parse(id), 0)
-		query = from u in "addresses", where: u.user_id == ^user_id, select: [:address, :country, :city, :zip_code]
-		Repo.all(query)
-	end
+	# def get_address!(id) do
+	# 	user_id = Kernel.elem(Integer.parse(id), 0)
+	# 	query = from u in "addresses", where: u.user_id == ^user_id, select: [:address, :country, :city, :zip_code]
+	# 	Repo.all(query)
+	#end
 	def finduser(name) do
 		query = from u in "users", where: u.fname == ^name, select: [:id]
 		Repo.all(query)
@@ -68,7 +60,16 @@ defmodule Squareshop.Identity do
 
 	def change_user(%User{} = user) do
 		User.changeset(user, %{})
-	  end
+	end
+	
+	def update_user(%User{} = user, attrs) do
+		
+		Logger.debug("i ran")
+		user
+		|> User.changeset(attrs)
+		|> Repo.update()
+		
+	 end  
 
 
 end

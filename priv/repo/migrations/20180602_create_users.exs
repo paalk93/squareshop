@@ -8,8 +8,10 @@ defmodule Compare.Repo.Migrations.CreateUsers do
 			add :phone, :string
 			add :email, :string
 			add :password, :string
-
-
+			add :address, :string
+      		add :country, :string
+     		add :city, :string
+      		add :zip_code, :integer
 			timestamps()
 		end
 	end
