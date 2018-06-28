@@ -1,13 +1,26 @@
 defmodule Squareshop.Products do
 
 	# Imports
-	import Ecto.Query
+	use Ecto.Schema
+	import Ecto.Changeset
+	import Ecto.Query, only: [from: 2]
 
 	#Alias
 	alias Squareshop.Repo
 	alias Squareshop.Products
 	alias Squareshop.Products.Product
 	require Logger
+
+
+	#search function
+
+	def search(query, search_term) do
+		wildcard_search = "%#{search_term}%"
+	
+		from product in query,
+		where: ilike(product.name, ^wildcard_search),
+		or_where: ilike(product.summary, ^wildcard_search)
+	end
 
 
 	#Add a product
@@ -21,6 +34,14 @@ defmodule Squareshop.Products do
 	# Listing all the products
 	def list_products() do
 		Repo.all(Product)
+	end
+
+	def list_products(params) do
+		search_term = get_in(params, ["query"])
+	
+		Product
+		|> Products.search(search_term)
+		|> Repo.all()
 	end
 
 	def get_product!(id) do

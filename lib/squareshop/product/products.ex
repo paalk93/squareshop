@@ -1,6 +1,12 @@
 defmodule Squareshop.Products.Product do
   use Ecto.Schema
   import Ecto.Changeset
+  import Ecto.Query
+
+ 	alias Squareshop.Repo
+	alias Squareshop.Products
+	alias Squareshop.Products.Product
+
 	require Logger
 
   schema "products" do
@@ -14,6 +20,15 @@ defmodule Squareshop.Products.Product do
     field :supplier, :integer
 
     timestamps()
+  end
+
+  
+  def list_products(params) do
+    search_term = get_in(params, ["query"])
+
+    Product
+    |> Product.search(search_term)
+    |> Repo.all()
   end
 
   def changeset(products, attrs) do
