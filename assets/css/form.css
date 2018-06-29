@@ -49,15 +49,60 @@
     -moz-box-shadow:    inset 1px 1px 10px var(--text-base);
     box-shadow:         inset 1px 1px 10px var(--text-base);
 }
-.sq-form input[type=button], input[type=submit], input[type=reset], button[type=button], button[type=submit], button[type=reset] {
-    background-color: var(--success);
-    border: none;
-    color: var(--white);
-    padding: 0.5rem 2rem;
-    text-decoration: none;
-    margin: 0.2rem;
-    cursor: pointer;
+/* Alle knapper lages med tag <button>! Ingen knapper lages med tag
+  <input type="button/reset/submit">!
+  Knapper er laget for 4 bruksområder. Klasse .sq-buttom-main er for fremhevet
+   knapp som er valg som primærvalg for brukeren. Brukeren skal aldri ha mer
+   enn en instans av knapp satt til .sq-buttom-main til enhver tid.
+   Klasse .sq-button-default er for standardknapper. Klasse .sq-button-low er
+   for knapper som brukeren skal kunne velge, men som vi ikke ønsker at
+   brukeren skal velge (for eksempel "Avbryt"). Klasse .sq-button-muted er for
+   knapper som er deaktivert */
+.sq-button-main {
+  background-color: var(--button-main);
+  color: var(--text-base);
+  padding: 0.6rem 1.8rem;
+  cursor: pointer;
+  font-weight: 550;
+  border: none;
+  box-shadow: none;
+  border-radius: 0px;
 }
+.sq-button-default {
+  background-color: var(--button-default);
+  color: var(--text-base);
+  padding: 0.6rem 1.8rem;
+  cursor: pointer;
+  font-weight: 550;
+  border: none;
+  box-shadow: none;
+  border-radius: 0px;
+}
+.sq-button-low {
+    background-color: var(--button-lowkey);
+    color: var(--text-base);
+    padding: 0.6rem 1.8rem;
+    cursor: pointer;
+    font-weight: 550;
+    border: none;
+    box-shadow: none;
+    border-radius: 0px;
+  }
+  .sq-button-muted {
+    background-color: var(--muted);
+    color: var(--text-base);
+    padding: 0.6rem 1.8rem;
+    cursor: pointer;
+    font-weight: 550;
+    border: none;
+    box-shadow: none;
+    border-radius: 0px;
+  }
+  .sq-button-main:hover, .sq-button-default:hover, .sq-button-low:hover {
+    background-color: var(--muted);
+    color: var(--black);
+  }
+
 .sq-form select:focus,
 .sq-form textarea:focus,
 .sq-form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):focus{
