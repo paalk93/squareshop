@@ -1,5 +1,5 @@
-<div class="sq-main-layout">
-	<div class="sq-admin-products-table-layout-area-panel">
+<div class="sq-page">
+  <div class="sq-content">
 	<%= render "form.html", Map.put(assigns, :action, admin_products_path(@conn, :create)) %>
 
 	</div>
