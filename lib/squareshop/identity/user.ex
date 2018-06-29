@@ -3,6 +3,7 @@ defmodule Squareshop.Identity.User do
 	use Ecto.Schema
 	import Ecto.Changeset
 	require Logger
+	alias Comeonin.Pbkdf2
 	schema "users" do
 		field :fname, :string
 		field :lname, :string
