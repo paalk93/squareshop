@@ -12,8 +12,10 @@
   </head>
 
   <body>
-    <div class="container">
-     <h1>Terms of Service will come here</h1>
+    <div class="sq-page">
+      <div class="sq-content">
+        <h1>Terms of Service will come here</h1>
+      </div>
     </div> <!-- /container -->
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
