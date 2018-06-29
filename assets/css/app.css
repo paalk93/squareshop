@@ -136,7 +136,6 @@ flex: 1;
 	background-color: var(--background);
 }
 
-
 .sq-item-card{
   width:7rem;
   height:7rem;
@@ -145,7 +144,6 @@ flex: 1;
   border:1px solid black;
   margin-bottom: 0.5em;
   }
-
 
 /* social media modal box */
 .sq-modal-social-media{
