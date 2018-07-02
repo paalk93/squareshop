@@ -14,7 +14,7 @@ defmodule Squareshop.Identity.User do
 		field :city, :string
     	field :country, :string
     	field :zip_code, :integer
-		embeds_many :shopping_cart, Sales.Cart
+		embeds_many :shopping_cart, Squareshop.Sales.Cart
 		timestamps()
 	end
 	def changeset(user, attrs) do
