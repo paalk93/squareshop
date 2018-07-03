@@ -29,7 +29,7 @@
   				<div class="sq-flex-1"></div>
 
   				<!-- Searchbar -->
-  				<div class="sq-flex-auto sq-form" style="text-align:center">
+  				<div class="sq-flex-auto sq-form sq-text-center">
   					<%# <input type="text" placeholder="Search..." name="search" class="sq-nav-margin"> %>
             <%= form_for @conn, products_path(@conn, :index), [method: :get, class: "pull-right"], fn f -> %>
               <%= search_input f, :query %>
@@ -65,7 +65,7 @@
             <div class="sq-nav-dropdown">
               <button><a class="sq-nounderline sq-white-text" onclick="toggleDropdown()">Categories</a></button>
               <div class="sq-nav-dropdown-content">
-                <ul class="sq-dropdown-content-list">
+                <ul>
                   <li><a>Link 1</a></li>
                   <li><a>Link 2</a></li>
                   <li><a>Link 3</a></li>

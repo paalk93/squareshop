@@ -11,12 +11,12 @@
     min-width:7em;
     z-index: 1;
 }
-.sq-dropdown-content-list li{
+.sq-nav-dropdown-content li{
   color:var(--text-white);
   margin:1em;
   cursor:pointer;
 }
-.sq-dropdown-content-list{
+.sq-nav-dropdown-content ul{
   list-style:none;
   padding:0.2em;
 }
