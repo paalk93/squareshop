@@ -40,6 +40,7 @@ defmodule SquareshopWeb do
       import SquareshopWeb.Router.Helpers
       import SquareshopWeb.ErrorHelpers
       import SquareshopWeb.Gettext
+      import SquareshopWeb.Helpers.Auth, only: [signed_in?: 1]
     end
   end
 
