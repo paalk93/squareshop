@@ -25,11 +25,11 @@
       <!--NAVBAR Part 2/3-->
   		</div>
   			<div class="sq-navbar-domain  sq-secondary" style="width:100%;display:flex;">
-  				<a href="/" class="sq-text-white sq-secondary">Home</a>
+  				<a href="/" class="sq-text-white sq-secondary sq-margin-left">Home</a>
   				<div class="sq-flex-1"></div>
 
   				<!-- Searchbar -->
-  				<div class="sq-flex-auto sq-form">
+  				<div class="sq-flex-auto sq-form" style="text-align:center">
   					<%# <input type="text" placeholder="Search..." name="search" class="sq-nav-margin"> %>
             <%= form_for @conn, products_path(@conn, :index), [method: :get, class: "pull-right"], fn f -> %>
               <%= search_input f, :query %>
@@ -42,7 +42,7 @@
   				<div class="sq-flex-1 sq-text-right">
   					<div class="sq-air-x-05 sq-nav-btn-group2 sq-flex-1">
         			<!-- UserButton -->
-					<button class="sq-nav-btn2"><%= link "Register", to: user_path(@conn, :new) %></button>
+					<button class="sq-nav-btn2"><%= link "Register", to: user_path(@conn, :new), class: "sq-nounderline sq-white-text" %></button>
         			<button onclick="toggleModal('myModal')">
           			<svg id="i-user" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
               	<path d="M22 11 C22 16 19 20 16 20 13 20 10 16 10 11 10 6 12 3 16 3 20 3 22 6 22 11 Z M4 30 L28 30 C28 21 22 20 16 20 10 20 4 21 4 30 Z" />
@@ -62,13 +62,24 @@
   			<!--NAVBAR Part 3/3 -->
   			<div class="sq-navbar-links sq-secondary-highlight sq-text-center">
   				<div class="sq-nav-btn-group">
-  					<a href="/categories">Categories</a>
-            <a href="/products">Products</a>
-  					<a href="/products">White Kopps</a>
-  					<a href="/products">Big Black Kopps</a>
-  					<a href="/products">Bestselgere</a>
-  					<a href="/products">Kampanjer</a>
-  					<a href="/user/1">Userpage</a>
+            <div class="sq-nav-dropdown">
+              <button><a class="sq-nounderline sq-white-text" onclick="toggleDropdown()">Categories</a></button>
+              <div class="sq-nav-dropdown-content">
+                <ul class="sq-dropdown-content-list">
+                  <li><a>Link 1</a></li>
+                  <li><a>Link 2</a></li>
+                  <li><a>Link 3</a></li>
+                  <li><a>Link 4</a></li>
+                  <li><a>Link 5</a></li>
+                </ul>
+              </div>
+            </div>
+            <button><a class="sq-nounderline sq-white-text" href="/products">Products</a></button>
+  					<button><a class="sq-nounderline sq-white-text" href="/products">White Kopps</a></button>
+  					<button><a class="sq-nounderline sq-white-text" href="/products">Big Black Kopps</a></button>
+  					<button><a class="sq-nounderline sq-white-text" href="/products">Bestselgere</a></button>
+  					<button><a class="sq-nounderline sq-white-text" href="/products">Kampanjer</a></button>
+  					<button><a class="sq-nounderline sq-white-text" href="/user/1">Userpage</a></button>
   				</div>
   			</div>
   		</div>

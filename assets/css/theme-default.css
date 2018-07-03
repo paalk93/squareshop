@@ -90,7 +90,7 @@
 .sq-background-lightblue{background-color: var(--info-highlight);}
 .sq-background-green{background-color: var(--success);}
 .sq-background-red{background-color: var(--danger-highlight);}
-
+.sq-white-text{color: var(--text-white);}
 /* Shadows */
 
 .sq-shadow-lt{
