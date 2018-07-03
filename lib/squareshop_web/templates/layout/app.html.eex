@@ -42,12 +42,12 @@
   				<div class="sq-flex-1 sq-text-right">
   					<div class="sq-air-x-05 sq-nav-btn-group2 sq-flex-1">
         			<!-- UserButton -->
-					<button class="sq-nav-btn2"><%= link "Register", to: user_path(@conn, :new) %></button>
-            <%= link "Home", to: page_path(@conn, :index) %>
+					<button class="sq-nav-btn2"><%= link "Register", to: user_path(@conn, :new), class: "sq-nounderline sq-white-text sq-margin-1" %></button>
+            <button><%= link "Home", to: page_path(@conn, :index), class: "sq-nounderline sq-white-text" %></button>
             <%= if signed_in?(@conn) do %>
-                <%= link "Sign out", to: login_path(@conn, :delete), method: :delete %>
+              <%= link "Sign out", to: login_path(@conn, :delete), method: :delete %>
               <% else %>
-                <%= link "Sign in", to: login_path(@conn, :new) %>
+                <button><%= link "Sign in", to: login_path(@conn, :new), class: "sq-nounderline sq-white-text" %></button>
                 <% end %>
 
         			<!-- ShoppingCartButton -->
