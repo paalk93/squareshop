@@ -20,7 +20,7 @@ defmodule SquareshopWeb.Router do
 		get "/tos", TosController, :index
 		get "/about", AboutController, :index
 		get "/invoice", InvoiceController, :index
-		get "/shopping", ShoppingController, :index
+		resources "/shopping", ShoppingController
 		resources "/products", ProductsController
 		resources "/adminproducts", AdminProductsController
 		resources "/adminuser", AdminUserController
