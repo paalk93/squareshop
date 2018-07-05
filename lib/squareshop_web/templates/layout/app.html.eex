@@ -32,7 +32,7 @@
   				<div class="sq-flex-auto sq-form sq-text-center">
   					<%# <input type="text" placeholder="Search..." name="search" class="sq-nav-margin"> %>
             <%= form_for @conn, products_path(@conn, :index), [method: :get, class: "pull-right"], fn f -> %>
-              <%= search_input f, :query %>
+              <%= search_input f, :query, style: "width:50em;" %>
               <%= submit "Search" %>
             <% end %>
   				</div>
@@ -65,7 +65,7 @@
   			<div class="sq-navbar-links sq-secondary-highlight sq-text-center">
   				<div class="sq-nav-btn-group">
             <div class="sq-nav-dropdown">
-              <button><a class="sq-nounderline sq-white-text" onclick="toggleDropdown()">Categories</a></button>
+              <button><a class="sq-nounderline sq-white-text" onclick="toggleDropdown()">Categories<span id="togglearrow"> &darr;</span></a></button>
               <div class="sq-nav-dropdown-content">
                 <ul>
                   <li><a>Link 1</a></li>
