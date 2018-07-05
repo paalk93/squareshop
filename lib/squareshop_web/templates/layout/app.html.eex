@@ -51,13 +51,7 @@
                 <% end %>
 
         			<!-- ShoppingCartButton -->
-        			<button>
-          			<svg id="i-cart" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-              	<path d="M6 6 L30 6 27 19 9 19 M27 23 L10 23 5 2 2 2" />
-              	<circle cx="25" cy="27" r="2" />
-              	<circle cx="12" cy="27" r="2" />
-          			</svg>
-        			</button>
+        			<button><%= link "Cart", to: shopping_path(@conn, :index), class: "sq-nounderline sq-white-text"%></button>
     				</div>
   				</div>
   			</div>
